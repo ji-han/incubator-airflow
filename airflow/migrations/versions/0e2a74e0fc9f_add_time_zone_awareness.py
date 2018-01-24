@@ -58,16 +58,14 @@ def upgrade():
         op.alter_column(table_name='log', column_name='dttm', type_=mysql.TIMESTAMP(fsp=6))
         op.alter_column(table_name='log', column_name='execution_date', type_=mysql.TIMESTAMP(fsp=6))
 
-        op.alter_column(table_name='sla_miss', column_name='execution_date',
-                        type_=mysql.TIMESTAMP(fsp=6), nullable=False)
+        op.alter_column(table_name='sla_miss', column_name='execution_date', type_=mysql.TIMESTAMP(fsp=6))
         op.alter_column(table_name='sla_miss', column_name='timestamp', type_=mysql.TIMESTAMP(fsp=6))
 
         op.alter_column(table_name='task_fail', column_name='execution_date', type_=mysql.TIMESTAMP(fsp=6))
         op.alter_column(table_name='task_fail', column_name='start_date', type_=mysql.TIMESTAMP(fsp=6))
         op.alter_column(table_name='task_fail', column_name='end_date', type_=mysql.TIMESTAMP(fsp=6))
 
-        op.alter_column(table_name='task_instance', column_name='execution_date',
-                        type_=mysql.TIMESTAMP(fsp=6), nullable=False)
+        op.alter_column(table_name='task_instance', column_name='execution_date', type_=mysql.TIMESTAMP(fsp=6))
         op.alter_column(table_name='task_instance', column_name='start_date', type_=mysql.TIMESTAMP(fsp=6))
         op.alter_column(table_name='task_instance', column_name='end_date', type_=mysql.TIMESTAMP(fsp=6))
         op.alter_column(table_name='task_instance', column_name='queued_dttm', type_=mysql.TIMESTAMP(fsp=6))
